@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 5{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calculadora simple de dos numeros</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio5" method="post" class="row g-3"  >
+                            <div class="mb-3">
+                                <label for="" class="form-label">Ingrese el primer numero</label>
+                                <input type="number" name="num1"  class="form-control" id="num1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="" class="form-label">Ingrese el segundo numero</label>
+                                <input type="number" name="num2"  class="form-control" id="num2">
+                            </div>
+
+                            <div class="mb-3">
+                                 <label for="" class="form-label">Ingresa La Operacion</label>
+                                 <input type="text" name="operacion"  class="form-control" id="operacion" >
+                            </div>
+
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">Calcular Operacion</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4>El resultado de la: <span class="fw-bold" id=""> {{numerosss}} </span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<br>
+<br>
+   
+<!-- Descripción del ejercicio 5 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-secondary mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Escribe un programa que funcione como una calculadora simple. El usuario debe ingresar dos números y una operación (suma, resta, multiplicación, división). El programa debe mostrar el resultado de la operación.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Dos números y una operación (suma, resta, multiplicación o división).</li>
+          <li><strong>Proceso:</strong> Realizar la operación solicitada.</li>
+          <li><strong>Salida:</strong> El resultado de la operación.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <br>
+<br>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 3{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calculo de longitudes de los tres lados de un triangulo</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio3" method="post" class="row g-3">
+                        
+                            <div class="mb-3">
+                                <label for="primerCorte" class="form-label">Ingrese el primer lado</label>
+                                <input type="number" name="lado1"  class="form-control" id="lado1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="segundoCorte" class="form-label">Ingrese el segundo lado</label>
+                                <input type="number" name="lado2"  class="form-control" id="lado2">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tercerCorte" class="form-label">Ingrese el Tercer lado</label>
+                                <input type="number" name="lado3" class="form-control" id="lado3">
+                            </div>
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">Calcular Triangulo</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4>El Triangulo Es: <span class="fw-bold" id="resultado">{{lados}} </span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<br>
+   <br>
+
+<!-- Descripción del ejercicio 3 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-warning mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Escribe un programa que pida las longitudes de los tres lados de un triángulo y determine si es equilátero, isósceles o escaleno.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Longitudes de los tres lados de un triángulo.</li>
+          <li><strong>Proceso:</strong> Comparar los tres lados:<br>
+            - Equilátero: Todos los lados son iguales.<br>
+            - Isósceles: Dos lados son iguales.<br>
+            - Escaleno: Todos los lados son diferentes.
+          </li>
+          <li><strong>Salida:</strong> El tipo de triángulo: equilátero, isósceles o escaleno.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+
+{% endblock %}

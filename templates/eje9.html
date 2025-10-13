@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 9{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div class="container mt-5">
+
+        
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calcular Los Digitos De Un Numero</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio9" method="post" class="row g-3" >
+                           
+                            <div class="mb-3">
+                                <label for="primerCorte" class="form-label">Ingrese Un Numero</label>
+                                <input type="number" name="num"  class="form-control" id="num">
+                            </div>
+                         
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">Calcular Promedio</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4>Los Digitos Del Numero son: <span class="fw-bold" id="resultado"> {{ digitos}} </span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<br>
+   <br>
+ <!-- Descripción del ejercicio 9 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-info mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Escribe un programa que lea un número por el teclado y determine cuántos dígitos tiene (número de 1 a 4 dígitos) y si es mayor a 4 dígitos.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Un número.</li>
+          <li><strong>Proceso:</strong> Usar condicionales para contar cuántos dígitos tiene el número:<br>
+            - Menos de 10: 1 dígito.<br>
+            - Entre 10 y 99: 2 dígitos.<br>
+            - Entre 100 y 999: 3 dígitos.<br>
+            - Entre 1000 y 9999: 4 dígitos.<br>
+            - Más de 4 dígitos: Más de 4 dígitos.
+          </li>
+          <li><strong>Salida:</strong> El número de dígitos del número dado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+
+
+{% endblock %}

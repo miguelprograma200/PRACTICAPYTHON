@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 8{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calcular El indice de (IMC)</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio8" method="post" class="row g-3">
+                           
+                            <div class="mb-3">
+                             
+                                <label for="" class="form-label">Ingrese El Peso</label>
+                                <input type="number"  name="peso" class="form-control" id="peso">
+                            </div>
+                           
+                            <div class="mb-3">
+                                <label for="" class="form-label">Ingrese La Altura</label>
+                                <input type="number" name="altura"  class="form-control" id="altura">
+                            </div>
+                           
+                            <div class="d-grid mt-4"> 
+                                <button type="submit" class="btn btn-primary">Calcular (IMC)</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4><span class="fw-bold" id="resultado">{{peso_altura}} </span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+  <br>
+   <br>
+ <!-- Descripción del ejercicio 8 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-warning mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Escribe un programa que calcule el índice de masa corporal (IMC) de una persona a partir de su peso y altura, e indique el rango de su peso.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Peso y altura de la persona.</li>
+          <li><strong>Proceso:</strong> Calcular el IMC usando la fórmula IMC = peso / altura<sup>2</sup>. Clasificar el IMC:<br>
+            - Menos de 18.5: Bajo peso.<br>
+            - Entre 18.5 y 24.9: Peso normal.<br>
+            - Entre 25 y 29.9: Sobrepeso.<br>
+            - 30 o más: Obesidad.
+          </li>
+          <li><strong>Salida:</strong> El IMC calculado y la categoría de peso (bajo peso, peso normal, sobrepeso u obesidad).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+{% endblock %}

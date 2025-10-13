@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 6{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calculo de bono de empleados</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio6" method="post" class="row g-3" >
+                           
+                            <div class="mb-3">
+                                <label for="primerCorte" class="form-label">Ingresa el Bono</label>
+                                <input type="text" name="antiguedad"  class="form-control" id="antiguedad">
+                            </div>
+
+   
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">Calcular Bono</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4>El bono optenido es<span class="fw-bold" id="resultado">{{variabless}}</span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <br>
+   <br>
+
+<!-- Descripción del ejercicio 6 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-primary mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Una empresa otorga un bono a sus empleados según su antigüedad. Si tiene menos de 5 años, el bono es de $100; si tiene entre 5 y 10 años, el bono es de $200; y si tiene más de 10 años, el bono es de $300. Escribe un programa que calcule el bono de un empleado.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Antigüedad del empleado.</li>
+          <li><strong>Proceso:</strong> Comparar la antigüedad y asignar el bono.</li>
+          <li><strong>Salida:</strong> El bono correspondiente según la antigüedad.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+
+{% endblock %}

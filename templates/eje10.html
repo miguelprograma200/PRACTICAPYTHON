@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 10{% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+    <div class="container mt-5">
+ 
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calcular Promedio de Cortes</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio10" method="post" class="row g-3">
+                           
+                            <div class="mb-3">
+                                
+                                <label for="primerCorte" class="form-label">Ingrese La Cantidad</label>
+                                
+                                <input type="number" name="cantidad" class="form-control" id="cantidad">
+                            </div>
+
+
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary">Calcular </button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4><span class="fw-bold" id="resultado"> {{cantidad_zapatos}} </span></h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<br>
+   <br>
+<!-- Descripción del ejercicio 10 -->
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card border-0 bg-light shadow-sm">
+      <div class="card-body">
+        <h5 class="fw-bold text-secondary mb-3">Descripción del Ejercicio</h5>
+        <p><strong>Enunciado:</strong> Hacer un programa para una tienda de zapatos que tiene una promoción de descuento para vender al mayor. El descuento depende del número de zapatos que se compren: 10% si son menos de diez, 20% si son más de veinte, 40% si son más de treinta. El precio de cada zapato es de $80,000.</p>
+        <ul>
+          <li><strong>Entrada:</strong> Cantidad de zapatos a comprar.</li>
+          <li><strong>Proceso:</strong> Calcular el precio total y aplicar el descuento:<br>
+            - Más de 30 zapatos: 40% de descuento.<br>
+            - Entre 21 y 30 zapatos: 20% de descuento.<br>
+            - Entre 11 y 20 zapatos: 10% de descuento.<br>
+            - 10 zapatos o menos: Sin descuento.
+          </li>
+          <li><strong>Salida:</strong> El total a pagar por la compra de zapatos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+{% endblock %}

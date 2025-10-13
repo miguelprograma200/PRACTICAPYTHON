@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Ejercicio 1 {% endblock %}
+{% block body %}
+
+   <br>
+   <br>
+   <br>
+   <br>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h3>Calcular Promedio de Cortes</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="ejercicio1" method="post" class="row g-3" >
+     
+                            <div class="mb-3">
+                           
+                                <label for="primerCorte" class="form-label">Ingrese el primer Corte</label>
+                                <input type="number"  name="nta1" class="form-control" id="nta1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="segundoCorte" class="form-label">Ingrese el segundo Corte</label>
+                                <input type="number"  name="nta2" class="form-control" id="nta2">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tercerCorte" class="form-label">Ingrese el Tercer Corte</label>
+                                <input type="number"  name="nta3"  class="form-control" id="nta3">
+                            </div>
+
+                           
+                            <div class="d-grid mt-4">
+                               
+                                <button type="submit" value="promediar" class="btn btn-primary">Calcular Promedio</button>
+                            </div>
+                        </form>
+
+                        <div class="mt-4 text-center">
+                            <h4>El promedio es:<span class="fw-bold" id="resultado">{{pro}}</span></h4>
+                            <h5>{{m}} </h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<br>
+   <br>
+
+    <!-- Descripción del ejercicio 1 -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card border-0 bg-light shadow-sm">
+        <div class="card-body">
+          <h5 class="fw-bold text-primary mb-3">Descripción del Ejercicio</h5>
+          <p><strong>Enunciado:</strong> Escribe un programa que pida al usuario tres notas y determine si el alumno aprobó o reprobó de acuerdo a su promedio. Considera una nota mínima de aprobación de 60.</p>
+          <ul>
+            <li><strong>Entrada:</strong> Tres notas del alumno.</li>
+            <li><strong>Proceso:</strong> Calcular el promedio de las tres notas. Si el promedio es mayor o igual a 60, aprobará; si es menor, reprobará.</li>
+            <li><strong>Salida:</strong> "Aprobado" o "Reprobado" según el promedio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+   <br>
+{% endblock %}
