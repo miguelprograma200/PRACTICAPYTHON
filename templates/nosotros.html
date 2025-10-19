@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Acerca De PRACTICAPYTHON {% endblock %}
+{% block body %}
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <header class="text-center mb-4">
+          <h1 class="display-6">Acerca de PRACTICAPYTHON</h1>
+          <p class="text-muted">Proyecto creado por Miguel para enseñar lógica de programación con ejercicios prácticos.</p>
+        </header>
+
+        <section class="card mb-4">
+          <div class="card-body">
+            <h2 class="h5">¿Qué es PRACTICAPYTHON?</h2>
+            <p>
+              PRACTICAPYTHON es una colección de ejercicios interactivos enfocados en lógica de programación que fueron pasados a escala profecional.  La idea es que cualquier persona,
+              sin importar su experiencia previa, pueda practicar, aprender y mejorar su pensamiento algorítmico mediante retos cortos y claros.
+            </p>
+            <ul>
+              <li>Estructura clara por ejercicios y niveles.</li>
+              <li>Feedback inmediato al enviar soluciones.</li>
+              <li>Recursos y ejemplos para cada tema.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="d-flex align-items-start gap-4 mb-4">
+          <img src="{{ url_for('static', filename='images/foto.jpg') }}" alt="Miguel - creador" class="rounded-circle" width="120" height="120" style="object-fit:cover;">
+          <div>
+            <h3 class="h6 mb-1">Sobre el creador</h3>
+            <p class="mb-1">
+              Hola, soy miguel un estudiante de analisis y Desarrollado de software y el creador de PRACTICAPYTHON. Me apasiona enseñar programación de forma práctica
+              y accesible. Este proyecto nació para ayudar a estudiantes y autodidactas a mejorar su lógica con ejercicios sencillos y progresivos.
+            </p>
+            <p class="mb-0"><strong>Contacto:</strong> <a href="muguel.alealcendra"></a> • <a href="https://github.com/miguelprograma200" target="_blank">GitHub</a></p>
+          </div>
+        </section>
+
+        <section class="card mb-4">
+          <div class="card-body">
+            <h3 class="h6">Tecnologías usadas</h3>
+            <p class="mb-0">
+              El proyecto está construido con <strong>Python</strong>con<strong>Flask</strong>, y <strong>Bootstrap</strong> para el frontend. Los assets estáticos
+              se sirven desde la carpeta <code>/static</code>.
+            </p>
+          </div>
+        </section>
+
+        <section class="card mb-4">
+          <div class="card-body">
+            <h3 class="h6">Objetivos y alcance</h3>
+            <ol>
+              <li>Proveer ejercicios que fortalezcan el razonamiento lógico.</li>
+              <li>Crear materiales didácticos y una experiencia amigable para principiantes.</li>
+              <li>Permitir la extensión del repositorio por la comunidad (pull requests bienvenidos).</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="card mb-4">
+          <div class="card-body">
+            <h3 class="h6">Cómo puedes colaborar</h3>
+            <p>
+              Si quieres contribuir: abre un <strong>issue</strong> en GitHub describiendo el problema o la idea, o haz un <strong>pull request</strong> con nuevos ejercicios.
+              Revisa el README para guías de estilo y cómo ejecutar el proyecto localmente.
+            </p>
+            <a href="https://github.com/miguelprograma200/PRACTICAPYTHON" target="_blank" class="btn btn-outline-primary">Ver repo en GitHub</a>
+          </div>
+        </section>
+
+        <section class="text-muted small">
+          <p class="mb-0">Última actualización: {{ last_update if last_update else '' }}</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+{% endblock %}

@@ -6,6 +6,10 @@ app = Flask(__name__)
 def inicio():
     return render_template("index.html")
 
+@app.route("/nosotros")
+def nosotros():
+    return render_template("nosotros.html")
+
 @app.route("/eje1")
 def eje1():
     return render_template("eje1.html")
